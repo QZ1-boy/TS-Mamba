@@ -56,5 +56,5 @@ If this repository is helpful to your research, please cite our paper:
 ```
 # Related Work
 Our work is built on [TMP](https://github.com/xtudbxk/TMP), we also release some online video super-resolution works, i.e., [FDAN](https://github.com/IanYeung/EfficientVSR), [KSNet](xxx). 
-If have some questions about Mamba environment implementation, please refer to [xxx](xxx).
+If have some questions about Mamba environment implementation, please refer to [LC-Mamba](https://github.com/Miinuuu/LC-Mamba).
 
