@@ -18,7 +18,7 @@ pip install causal_conv1d==1.0.0
 pip install mamba-ssm==1.0.1
 pip install open-python timm numpy tqdm scipy tensorboard transformers==4.33.0 spatial-correlation-sampler==0.3.0
 cd . /basicsr/ops/msda
-bash makr.sh
+bash make.sh
 python test.py
 ```
 
