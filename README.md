@@ -26,12 +26,12 @@ python test.py
 Training Datasets:
 
 REDS dataset: [here](https://seungjunnah.github.io/Datasets/reds.html),
-Vimeo-90K dataset: [here](https://github.com/anchen1011/toflow)
+Vimeo-90K dataset: [here](https://github.com/anchen1011/toflow).
 
 Testing Datasets:
 
 REDS4: [here](https://seungjunnah.github.io/Datasets/reds.html),
-Vid4 dataset: [here](https://drive.google.com/drive/folders/1An6hF1oYkeWxfOBxxKm073mvgIFrBNDA)
+Vid4 dataset: [here](https://drive.google.com/drive/folders/1An6hF1oYkeWxfOBxxKm073mvgIFrBNDA).
 
 
 # Train
