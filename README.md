@@ -15,7 +15,7 @@ git clone --depth=1 https://github.com/QZ1-boy/TS-Mamba && cd QZ1-boy/TS-Mamba/
 # given CUDA 11.6
 python -m pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
 
-pip3 install requirement.txt.
+pip3 install requirement.txt
 
 ```
 
