@@ -36,7 +36,7 @@ Testing Datasets:
 
 # Train
 ```python
-python3 basicsr/train.py -opt options/train/TSA/train_TSA.yaml.
+python3 basicsr/train.py -opt options/train/TSA/train_TSA.yaml
 ```
 
 # Test
