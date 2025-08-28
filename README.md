@@ -55,5 +55,5 @@ If this repository is helpful to your research, please cite our paper:
 }
 ```
 # Related Work
-Our work is built on [TMP](https://github.com/xtudbxk/TMP), we also some online video super-resolution works, i.e., [FDAN](https://github.com/IanYeung/EfficientVSR), [KSNet](xxx). 
+Our work is built on [TMP](https://github.com/xtudbxk/TMP), we also release some online video super-resolution works, i.e., [FDAN](https://github.com/IanYeung/EfficientVSR), [KSNet](xxx). 
 
