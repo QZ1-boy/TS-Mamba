@@ -4,7 +4,7 @@ The code of the paper "Trajectory-aware State Space Model for Online Video Super
 
 # Requirements
 
-CUDA==11.6 Python==3.7 Pytorch==1.13
+CUDA==11.7 Python==3.9 Pytorch==1.13.1
 
 ## Environment
 ```python
