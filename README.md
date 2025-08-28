@@ -22,13 +22,13 @@ pip3 install requirement.txt.
 ## Dataset Download
 Training Datasets:
 
-[REDS dataset] [REDS](https://seungjunnah.github.io/Datasets/reds.html),
-[Vimeo-90K dataset] [Vimeo-90K](https://github.com/anchen1011/toflow)
+REDS dataset(https://seungjunnah.github.io/Datasets/reds.html),
+Vimeo-90K dataset(https://github.com/anchen1011/toflow)
 
 Testing Datasets (Ground-Truth):
 
-[REDS4 dataset] [REDS4](https://seungjunnah.github.io/Datasets/reds.html),
-[Vid4 dataset] [Vid4](https://drive.google.com/drive/folders/1An6hF1oYkeWxfOBxxKm073mvgIFrBNDA)
+REDS4(https://seungjunnah.github.io/Datasets/reds.html),
+Vid4 dataset(https://drive.google.com/drive/folders/1An6hF1oYkeWxfOBxxKm073mvgIFrBNDA)
 
 
 # Train
