@@ -1,6 +1,6 @@
 # TS-Mamba
 
-The code of the paper "Trajectory-aware State Space Model for Online Video Super-Resolution".
+The code of the paper "Trajectory-aware Shifted State Space Models for Online Video Super-Resolution".
 
 # Requirements
 
