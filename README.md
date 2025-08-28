@@ -47,10 +47,10 @@ python3 basicsr/test.py -opt options/test/TSA/test_TSA.yaml
 # Citation
 If this repository is helpful to your research, please cite our paper:
 ```python
-@article{zhu2025fcvsr,
-  title={FCVSR: A Frequency-aware Method for Compressed Video Super-Resolution},
-  author={Zhu, Qiang and Zhang, Fan and Chen, Feiyu and Zhu, Shuyuan and Bull, David and Zeng, Bing},
-  journal={arXiv preprint arXiv:2502.06431},
+@article{zhu2025trajectory,
+  title={Trajectory-aware Shifted State Space Models for Online Video Super-Resolution},
+  author={Zhu, Qiang and Meng, Xiandong and Jiang, Yuxian and Zhang, Fan and Bull, David and Zhu, Shuyuan and Zeng, Bing},
+  journal={arXiv preprint arXiv:2508.10453},
   year={2025}
 }
 ```
