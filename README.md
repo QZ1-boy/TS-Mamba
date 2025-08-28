@@ -8,15 +8,18 @@ CUDA==11.6 Python==3.7 Pytorch==1.13
 
 ## Environment
 ```python
-conda create -n TSMamba python=3.7 -y && conda activate TSMamba
+conda create -n TSMamba python=3.9 -y && conda activate TSMamba
 
 git clone --depth=1 https://github.com/QZ1-boy/TS-Mamba && cd QZ1-boy/TS-Mamba/
 
-# given CUDA 11.6
-python -m pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
-
-pip3 install requirement.txt
-
+python -m pip install torch==1.13.1 torchvision==0.14.1 torchaudio--0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+pip install -r requirement.txt
+pip install causal_conv1d==1.0.0
+pip install mamba-ssm==1.0.1
+pip install open-python timm numpy tqdm scipy tensorboard transformers==4.33.0 spatial-correlation-sampler==0.3.0
+cd . /basicsr/ops/msda
+bash makr.sh
+python test.py
 ```
 
 ## Dataset Download
