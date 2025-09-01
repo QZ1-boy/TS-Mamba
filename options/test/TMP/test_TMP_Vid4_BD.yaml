@@ -1,0 +1,55 @@
+# general settings
+name: TMP_test_Vid4_BD
+model_type: VideoRecurrentModel
+scale: 4
+num_gpu: 1  # official: 8 GPUs
+manual_seed: 0
+
+datasets:
+  test:
+    name: Vid4
+    type: VideoRecurrentTestDataset
+    dataroot_gt: /share3/home/zqiang/Vimeo90K/Vid4/GT
+    dataroot_lq: /share3/home/zqiang/Vimeo90K/Vid4/BDx4
+    io_backend:
+      type: disk
+
+    cache_data: true
+    num_frame: -1
+    # padding: reflection_circle
+
+# network structures
+network_g:
+  type: TMP
+  num_in_ch: 3
+  num_out_ch: 3
+  num_feat: 64
+  num_frame: 15
+  num_extract_block: 3
+  num_reconstruct_block: 10
+  center_frame_idx: None
+  hr_in: False
+
+# path
+path:
+  pretrain_network_g: /share3/home/zqiang/TMP/experiments/TMP_train_Vimeo_BD/models/net_g_150000.pth #
+  strict_load_g: true
+  param_key_g: params
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  flip_seq: false
+  center_frame_only: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true

@@ -1,0 +1,51 @@
+# general settings
+name: BasicVSRPPU_test_Vid4_BI
+model_type: VideoRecurrentModel
+scale: 4
+num_gpu: 1  # official: 8 GPUs
+manual_seed: 0
+
+datasets:
+  test:
+    name: Vid4
+    type: VideoRecurrentTestDataset
+    dataroot_gt: /share3/home/zqiang/Vimeo90K/Vid4/GT
+    dataroot_lq: /share3/home/zqiang/Vimeo90K/Vid4/BIx4
+    io_backend:
+      type: disk
+
+    cache_data: True
+    num_frame: -1
+    # padding: reflection_circle
+
+# network structures
+network_g:
+  type: BasicVSRPPU
+  mid_channels: 64
+  num_blocks: 1
+  is_low_res_input: true
+  spynet_path: /share3/home/zqiang/TMP/experiments/pretrained_models/spynet_sintel_final-3d2a1287.pth
+
+# path
+path:
+  pretrain_network_g: /share3/home/zqiang/TMP/experiments/BasicVSRPPU_train_REDS/models/net_g_600000.pth
+  strict_load_g: true
+  param_key_g: params
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  flip_seq: false
+  center_frame_only: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true

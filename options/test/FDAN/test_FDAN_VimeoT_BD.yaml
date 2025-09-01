@@ -1,0 +1,55 @@
+# general settings
+name: TSMamba_test_Vimeo90K_T_BD
+model_type: VideoRecurrentModel
+scale: 4
+num_gpu: 1  # official: 8 GPUs
+manual_seed: 0
+
+datasets:
+  test:
+    name: Vimeo90K
+    type: VideoTestVimeo90KDataset
+    dataroot_gt: /share3/home/zqiang/Vimeo90K/sequences
+    dataroot_lq: /share3/home/zqiang/Vimeo90K/sequences_BD
+    meta_info_file: basicsr/data/meta_info/meta_info_Vimeo90K_test_GT.txt
+    cache_data: false
+    io_backend:
+      type: disk
+    num_frame: 7
+
+# network structures
+network_g:
+  type: FDAN
+  num_feat: 64
+  num_extract_block: 0
+  num_block: 30
+  num_levels: 1
+  num_heads: 8
+  num_points: 4
+  max_residue_magnitude: 10
+  flownet_path: experiments/pretrained_models/flownet/fastflownet_ft_sintel.pth
+  one_stage_up: true
+
+# path
+path:
+  pretrain_network_g: /share3/home/zqiang/TMP/experiments/FDAN_train_Vimeo_BD/models/net_g_165000.pth # net_g_175000 135,000 net_g_190000  net_g_200000 170000
+  strict_load_g: true
+  param_key_g: params
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  flip_seq: true
+  center_frame_only: true # false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true
