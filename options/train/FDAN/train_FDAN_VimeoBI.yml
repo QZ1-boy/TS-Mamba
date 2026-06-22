@@ -59,7 +59,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: /share3/home/zqiang/TMP/experiments/FDAN_train_Vimeo_BI_11/models/net_g_30000.pth
+  pretrain_network_g: ~ 
   strict_load_g: true
   resume_state: ~
 
