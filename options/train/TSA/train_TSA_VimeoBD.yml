@@ -77,7 +77,7 @@ train:
 
   # losses
   pixel_opt:
-    type: CharbonnierLoss
+    type: CharbonnierTrajectoryLoss
     loss_weight: 1.0
     reduction: mean
 
