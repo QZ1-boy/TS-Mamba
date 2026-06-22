@@ -28,7 +28,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: /share3/home/zqiang/TMP/experiments/TSA_train_Vimeo_BI_archived_20250727_225811/models/net_g_25000.pth
+  pretrain_network_g: ~ 
   strict_load_g: true
   param_key_g: params
 
