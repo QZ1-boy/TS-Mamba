@@ -16,7 +16,7 @@ datasets:
     io_backend:
       type: disk
 
-    num_frame: 5    ######
+    num_frame: 15 
     gt_size: 256
     interval_list: [1]
     random_reverse: false
@@ -27,7 +27,6 @@ datasets:
     # data loader
     num_worker_per_gpu: 10
     batch_size_per_gpu: 8
-    # batch_size_per_gpu: 1 # only for testing code
     dataset_enlarge_ratio: 200
     prefetch_mode: ~
 
@@ -54,7 +53,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: ~ # /share3/home/zqiang/TMP/experiments/TSA_train_Vimeo_BI_bb/models/net_g_95000.pth
+  pretrain_network_g: ~ 
   strict_load_g: true
   resume_state: ~
 
