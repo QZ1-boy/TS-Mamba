@@ -1,5 +1,5 @@
 # general settings
-name: TSA_train_REDS_L2_1
+name: TSA_train_REDS
 model_type: VideoRecurrentModel
 scale: 4
 num_gpu: auto  # official: 2 GPUs  auto
@@ -18,8 +18,8 @@ datasets:
     io_backend:
       type: disk
 
-    num_frame: 5
-    gt_size: 512
+    num_frame: 15
+    gt_size: 256
     interval_list: [1]
     random_reverse: true
     use_hflip: true
@@ -27,7 +27,7 @@ datasets:
 
     # data loader
     num_worker_per_gpu: 30
-    batch_size_per_gpu: 3
+    batch_size_per_gpu: 8
     dataset_enlarge_ratio: 200
     prefetch_mode: ~
 
@@ -35,7 +35,7 @@ datasets:
     name: REDS4
     type: VideoRecurrentTestDataset
     dataroot_gt: /share3/home/zqiang/REDS/REDS4/GT_online
-    dataroot_lq: /share3/home/zqiang/REDS/REDS4/REDS4_BI #  _tmp
+    dataroot_lq: /share3/home/zqiang/REDS/REDS4/REDS4_BI
 
     cache_data: True
     io_backend:
@@ -56,9 +56,9 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: /share3/home/zqiang/TMP/experiments/TSA_train_REDS_L2/models/net_g_285000.pth
+  pretrain_network_g: ~ 
   strict_load_g: true
-  resume_state: ~ # /share3/home/zqiang/TMP/experiments/TSA_train_REDS_L2/training_states/5000.state
+  resume_state: ~ 
 
 # training settings
 train:
@@ -82,7 +82,7 @@ train:
 
   # losses
   pixel_opt:
-    type: MSELoss # MSELoss # CharbonnierLoss # CharbonnierTrajectoryLoss #
+    type: CharbonnierTrajectoryLoss
     loss_weight: 1.0
     reduction: mean
 
