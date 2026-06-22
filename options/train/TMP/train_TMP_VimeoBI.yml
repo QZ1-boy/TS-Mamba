@@ -16,7 +16,7 @@ datasets:
     io_backend:
       type: disk
 
-    num_frame: 15    ######
+    num_frame: -1
     gt_size: 256
     interval_list: [1]
     random_reverse: false
