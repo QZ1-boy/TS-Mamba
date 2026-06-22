@@ -1,5 +1,5 @@
 # general settings
-name: TSA_train_Vimeo_BI_one
+name: TSA_train_Vimeo_BI
 model_type: VideoRecurrentModel
 scale: 4
 num_gpu: auto  # official: 2 GPUs
