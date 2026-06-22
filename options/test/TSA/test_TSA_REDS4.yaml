@@ -27,8 +27,7 @@ network_g:
 
 # path
 path:
-  # pretrain_network_g: /share3/home/zqiang/TMP/BI_degradation_REDS.pth
-  pretrain_network_g: /share3/home/zqiang/TMP/experiments/TSA_train_REDS/models/net_g_5000.pth
+  pretrain_network_g: ~ 
   strict_load_g: true
   param_key_g: params
 
